@@ -25,6 +25,8 @@ sleep 1
 oc login -u Betty -p r3dh4t1!
 sleep 1
 
+oc login -u system:admin
+
 echo "#label client=alpha:Amy,Andrew client=beta:Brian,Betty"
 oc label user/Amy client=alpha
 oc label user/Andrew client=alpha
