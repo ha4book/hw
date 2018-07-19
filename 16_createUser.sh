@@ -12,6 +12,19 @@ ansible masters -m shell -a"htpasswd -b /etc/origin/master/htpasswd Betty r3dh4t
 
 sleep 3
 
+echo "#login"
+oc login -u Amy -p r3dh4t1!
+sleep 1
+
+oc login -u Andrew -p r3dh4t1!
+sleep 1
+
+oc login -u Brian -p r3dh4t1!
+sleep 1
+
+oc login -u Betty -p r3dh4t1!
+sleep 1
+
 echo "#label client=alpha:Amy,Andrew client=beta:Brian,Betty"
 oc label user/Amy client=alpha
 oc label user/Andrew client=alpha
