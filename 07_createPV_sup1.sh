@@ -6,8 +6,8 @@ mkdir -p /srv/nfs/user-vols/pv10g{0001..0200}
 
 for pvnum in {0001..0050} ; do
 echo "/srv/nfs/user-vols/pv10g${pvnum} *(rw,root_squash)" >> /etc/exports.d/openshift-uservols.exports
-chown -R nfsnobody.nfsnobody  /srv/nfs
-chmod -R 777 /srv/nfs
+chown -R nfsnobody.nfsnobody  /srv/nfs/user-vols
+chmod -R 777 /srv/nfs/user-vols
 done
 
 sleep 3
